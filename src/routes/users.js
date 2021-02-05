@@ -8,4 +8,5 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+//Anche usando un server esterno dobbiamo esportare l'oggetto serverless(router)
 module.exports.handler= serverless(router); 
