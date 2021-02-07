@@ -5,8 +5,7 @@ var usersRouter = require('./routes/users');
 const app = express();
 const router = express.Router();
 
- //E' necessario usare per tutte le route il prefisso /.netlify/functions
- app.use('/.netlify/functions/api',router)
+
  //E' possibile anche usare un file esterno
  app.use('/.netlify/functions/api/users', usersRouter);
 
