@@ -5,15 +5,6 @@ var usersRouter = require('./routes/users');
 const app = express();
 const router = express.Router();
 
-//Possiamo dichiareare una route qui
- router.get('/', (req, res) =>
- {
-     res.json(
-     {
-        hello:'h1234add'
-     })
- });
-
  //E' necessario usare per tutte le route il prefisso /.netlify/functions
  app.use('/.netlify/functions/api',router)
  //E' possibile anche usare un file esterno
