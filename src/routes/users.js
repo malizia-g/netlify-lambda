@@ -4,7 +4,9 @@ const serverless = require ('serverless-http');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.json({
+      user:"pinco pallino"
+  });
 });
 
 module.exports = router;
