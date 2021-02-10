@@ -1,9 +1,13 @@
 const express = require('express');
 const serverless = require ('serverless-http');
+const cors = require ('cors');
+
 var usersRouter = require('./routes/users');
 
+
 const app = express();
-const router = express.Router();
+app.use(cors());
+//const router = express.Router();
 
 
  //E' possibile anche usare un file esterno
