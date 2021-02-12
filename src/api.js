@@ -3,7 +3,7 @@ const serverless = require ('serverless-http');
 const cors = require ('cors');
 
 var usersRouter = require('./routes/users');
-
+var electricityRouter = require('./routes/electricity');
 
 const app = express();
 app.use(cors());
@@ -12,6 +12,7 @@ app.use(cors());
 
  //E' possibile anche usare un file esterno
  app.use('/.netlify/functions/api/users', usersRouter);
+ app.use('/.netlify/functions/api/electricity', electricityRouter);
 
  //NB!
  //NON è necessario avviare il server perchè stiamo creando una lambda function
